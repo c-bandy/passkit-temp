@@ -4,7 +4,7 @@
   "homepage": "https://github.com/destinationstransfers/passkit",
   "version": "5.0.0",
   "engines": {
-    "node": ">=10.1"
+    "node": ">8.9"
   },
   "bin": {
     "passkit-keys": "./bin/passkit-keys"
@@ -48,6 +48,7 @@
   "author": "Tino Vyatkin <tino@vtkn.io>",
   "dependencies": {
     "color-string": "^1.5.3",
+    "mz": "^2.7.0",
     "node-forge": "^0.8.0",
     "yazl": "^2.5.1"
   },

@@ -4,12 +4,13 @@
 
 'use strict';
 
+const _URL = require('url').URL; // Node 8 compability
 const colorString = require('color-string');
 const decodePrivateKey = require('./lib/decodePrivateKey');
 const http2 = require('http2');
 const path = require('path');
 const { join } = require('path');
-const { stat, readFile } = require('fs').promises;
+const { stat, readFile } = require('mz/fs');
 
 const Pass = require('./pass');
 const PassImages = require('./lib/images');
@@ -224,7 +225,7 @@ class Template {
   webServiceURL(v) {
     if (arguments.length === 1) {
       // validating URL, it will throw on bad value
-      const url = v instanceof URL ? v : new URL(v);
+      const url = v instanceof _URL ? v : new _URL(v);
       if (url.protocol !== 'https:')
         throw new Error(`webServiceURL must be on HTTPS!`);
       this.fields.webServiceURL = url.toString();

@@ -1,7 +1,7 @@
 'use strict';
 
 const getBufferHash = require('./getBufferHash');
-const { readFile } = require('fs').promises;
+const { readFile } = require('mz/fs');
 
 /**
  * Reads file and returns it content as buffer and hash as hex string

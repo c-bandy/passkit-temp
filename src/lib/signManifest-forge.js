@@ -2,10 +2,7 @@
 
 const decodePrivateKey = require('./decodePrivateKey');
 const forge = require('node-forge');
-const {
-  promises: { readFile },
-  readFileSync,
-} = require('fs');
+const { readFile, readFileSync } = require('mz/fs');
 
 /**
  * Signs a manifest and returns the signature.

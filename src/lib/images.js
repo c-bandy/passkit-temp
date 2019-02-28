@@ -5,7 +5,7 @@
 'use strict';
 
 const { basename, extname, resolve } = require('path');
-const { stat, readdir } = require('fs').promises;
+const { stat, readdir } = require('mz/fs');
 
 // Supported images.
 const { IMAGES, DENSITIES } = require('../constants');
